@@ -54,7 +54,7 @@ class LoginActivity : AppCompatActivity() {
         viewmodel?.fetchCustomUI?.observe(this, androidx.lifecycle.Observer {
             Toast.makeText(this, "welcome, ${it?.headingText}", Toast.LENGTH_LONG).show()
 
-            Timer("LoadJson", false).schedule(2000) {
+            Timer("LoadJson", false).schedule(1500) {
 
                 loadData(it)
             }

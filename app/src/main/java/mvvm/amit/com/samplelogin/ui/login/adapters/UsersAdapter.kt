@@ -20,15 +20,19 @@ class UsersAdapter(private val context: Context, private var list: MutableList<U
     }
 
     override fun getItemCount(): Int {
-        return list.size
+        return list?.size
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val user = list.get(position)
-        holder.name?.text = user.value
-        holder.info1?.text = user?. hint
-        holder.info2?.text = user?.key
-        holder.address?.text=user.value
+        val user = list?.get(position)
+
+        with(user!!){
+            holder.name?.text = value
+            holder.info1?.text =  hint
+            holder.info2?.text = key
+            holder.address?.text=value
+        }
+
     }
 
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view){

@@ -24,11 +24,12 @@ class MainActivity : AppCompatActivity() {
         bookDataBundle?.let {
 
             val list = it.getParcelableArrayList<Uidatum>("user_list") as ArrayList<Uidatum>
-            listUsers.addAll(list)
+            listUsers?.addAll(list)
 
         }
 
         setContentView(R.layout.activity_main)
+        showProgressBar()
         recycler_main.layoutManager = LinearLayoutManager(this@MainActivity)
         adapter = UsersAdapter(
                 this,
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getUsersData() {
-        showProgressBar()
+
         hideProgressBar()
         adapter?.notifyDataSetChanged()
     }
