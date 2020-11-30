@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EzeTap</string>
+    <string name="action_settings">Settings</string>
+    <string name="label_name">Enter your name</string>
+    <string name="label_phone">Enter your phone no</string>
+    <string name="text_city">Enter your city</string>
+    <string name="login">Submit</string>
+    <string name="title_networkmod">Module Title</string>
+</resources>
